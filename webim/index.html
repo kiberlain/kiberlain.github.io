@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Webim - тестовое задание</title>
+    <meta charset="utf-8">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta property="og:url" content="">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@webim">
+    <meta name="twitter:creator" content="@webim">
+    <link rel="shortcut icon" href="images/favicons/favicon.ico">
+    <link rel="icon" href="images/favicons/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="canonical" href="">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<style>
+    @font-face {
+    font-family: 'Ubuntu';
+    src: url('fonts/ubuntu/Ubuntu-Light.woff2') format('woff2'),
+        url('fonts/ubuntu/Ubuntu-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('fonts/ubuntu/Ubuntu-LightItalic.woff2') format('woff2'),
+        url('fonts/ubuntu/Ubuntu-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('fonts/ubuntu/Ubuntu-Italic.woff2') format('woff2'),
+        url('fonts/ubuntu/Ubuntu-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('fonts/ubuntu/Ubuntu-Regular.woff2') format('woff2'),
+        url('fonts/ubuntu/Ubuntu-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('fonts/ubuntu/Ubuntu-Bold.woff2') format('woff2'),
+        url('fonts/ubuntu/Ubuntu-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('fonts/ubuntu/Ubuntu-BoldItalic.woff2') format('woff2'),
+        url('fonts/ubuntu/Ubuntu-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('fonts/ubuntu/Ubuntu-Medium.woff2') format('woff2'),
+        url('fonts/ubuntu/Ubuntu-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('fonts/ubuntu/Ubuntu-MediumItalic.woff2') format('woff2'),
+        url('fonts/ubuntu/Ubuntu-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('fonts/icons/icomoon.eot?7vfwjk');
+    src: url('fonts/icons/icomoon.eot?7vfwjk#iefix') format('embedded-opentype'),
+        url('fonts/icons/icomoon.ttf?7vfwjk') format('truetype'),
+        url('fonts/icons/icomoon.woff?7vfwjk') format('woff'),
+        url('fonts/icons/icomoon.svg?7vfwjk#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-01:before {
+    content: "\e900";
+    color: #363b66;
+}
+
+.icon-02:before {
+    content: "\e901";
+    color: #363b66;
+}
+
+.icon-app .path1:before {
+    content: "\e902";
+    color: rgb(151, 186, 51);
+}
+
+.icon-app .path2:before {
+    content: "\e903";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+}
+
+.icon-chatbots .path1:before {
+    content: "\e904";
+    color: rgb(106, 172, 206);
+}
+
+.icon-chatbots .path2:before {
+    content: "\e905";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+}
+
+.icon-email .path1:before {
+    content: "\e906";
+    color: rgb(114, 150, 205);
+}
+
+.icon-email .path2:before {
+    content: "\e907";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+}
+
+.icon-email .path3:before {
+    content: "\e908";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+}
+
+.icon-email .path4:before {
+    content: "\e909";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+}
+
+.icon-email .path5:before {
+    content: "\e90a";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+}
+
+.icon-feedback:before {
+    content: "\e90b";
+    color: #dab81a;
+}
+
+.icon-msn .path1:before {
+    content: "\e90c";
+    color: rgb(61, 211, 161);
+}
+
+.icon-msn .path2:before {
+    content: "\e90d";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+}
+
+.icon-msn .path3:before {
+    content: "\e90e";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+}
+
+.icon-msn .path4:before {
+    content: "\e90f";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+}
+
+.icon-sn:before {
+    content: "\e910";
+    color: #3b4269;
+}
+
+.icon-step_01 .path1:before {
+    content: "\e911";
+    color: rgb(44, 211, 184);
+}
+
+.icon-step_01 .path2:before {
+    content: "\e912";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+}
+
+.icon-step_02 .path1:before {
+    content: "\e913";
+    color: rgb(44, 211, 184);
+}
+
+.icon-step_02 .path2:before {
+    content: "\e914";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+}
+
+.icon-step_03 .path1:before {
+    content: "\e915";
+    color: rgb(44, 211, 184);
+}
+
+.icon-step_03 .path2:before {
+    content: "\e916";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+}
+
+.icon-step_04 .path1:before {
+    content: "\e917";
+    color: rgb(44, 211, 184);
+}
+
+.icon-step_04 .path2:before {
+    content: "\e918";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+}
+
+.icon-step_05 .path1:before {
+    content: "\e919";
+    color: rgb(44, 211, 184);
+}
+
+.icon-step_05 .path2:before {
+    content: "\e91a";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+}
+
+.icon-step_06 .path1:before {
+    content: "\e91b";
+    color: rgb(44, 211, 184);
+}
+
+.icon-step_06 .path2:before {
+    content: "\e91c";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+}
+
+.icon-yad:before {
+    content: "\e91d";
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: Ubuntu, Helvetica Neue, Arial, sans-serif;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #fff;
+    line-height: 1.5;
+    color: #74757b;
+}
+</style>
+
+<body>
+    <div class="page">
+        <header class="header uppercase">
+            <div class="header-bg"></div>
+            <div class="container">
+                <div class="flex space-between">
+                    <input type="checkbox" id="mobile-menu" hidden />
+                    <label class="mobile-menu md:show" for="mobile-menu">
+                        <span></span>
+                    </label>
+                    <ul class="mobile-menu-list">
+                        <li class="mobile-menu-item">
+                            <a href="" class="mobile-menu-link">Вход</a>
+                        </li>
+                        <li class="mobile-menu-item">
+                            <a href="" class="mobile-menu-link">Регистрация</a>
+                        </li>
+                        <li class="mobile-menu-item">
+                            <a href="" class="mobile-menu-link">Возможности</a>
+                        </li>
+                        <li class="mobile-menu-item">
+                            <a href="" class="mobile-menu-link">Тарифы</a>
+                        </li>
+                        <li class="mobile-menu-item">
+                            <a href="" class="mobile-menu-link">Партнёрам</a>
+                        </li>
+                        <li class="mobile-menu-item">
+                            <a href="" class="mobile-menu-link">Помощь</a>
+                        </li>
+                    </ul>
+                    <div class="column header-menu flex space-between md:hidden">
+                        <div class="auth">
+                            <ul class="auth-list list-inline">
+                                <li class="auth-item">
+                                    <a href="" class="auth-link">Вход</a>
+                                </li>
+                                <li class="auth-item">
+                                    <a href="" class="auth-link">Регистрация</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="nav-wrapper">
+                            <nav class="nav">
+                                <ul class="nav-list list-inline">
+                                    <li class="nav-item">
+                                        <a href="" class="nav-link">Возможности</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="" class="nav-link">Тарифы</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="" class="nav-link">Партнёрам</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="" class="nav-link">Помощь</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <a class="logo">
+                            <img src="images/logo_webim.svg" width="154" height="40" alt="logo">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <section class="articles-list">
+                <article class="intro articles-list-item">
+                    <section class="container">
+                        <h1 class="title title-1">Установка Webim</h1>
+                        <div class="content">
+                            <p>Установка онлайн-консультанта Webim на ваш сайт не займет много времени. Вы можете установить онлайн-консультант Webim на ваш сайт и протестировать его в течение 7 дней бесплатно. </p>
+                        </div>
+                        <footer class="buttons-group">
+                            <a href="" class="button is-active">Попробовать бесплатно</a>
+                            <a href="" class="button">Тарифы</a>
+                        </footer>
+                    </section>
+                </article>
+                <article class="simple-install articles-list-item">
+                    <section class="container">
+                        <h2 class="title title-2">Простая установка</h2>
+                        <div class="content">
+                            <p>Установка онлайн-консультанта Webim не займет более 15 минут</p>
+                        </div>
+                        <ol class="stages">
+                            <li class="stages-item">
+                                <b class="stages-item-icon">
+                                    <span class="icon-01"></span>
+                                </b>
+                                <a href="" class="stages-link">Регистрация</a>
+                            </li>
+                            <li class="stages-item">
+                                <b class="stages-item-icon">
+                                    <span class="icon-02"></span>
+                                </b>
+                                <a href="" class="stages-link">Установка HTML-кода</a>
+                            </li>
+                        </ol>
+                    </section>
+                </article>
+                <article class="install articles-list-item">
+                    <section class="container">
+                        <h2 class="title title-2">Установка html-кода</h2>
+                        <ul class="list">
+                            <li class="list-item">
+                                <h3 class="list-item-title">
+                                    <a class="list-item-link" href="#">Установка HTML-кода Webim для сайтов на Joomla</a>
+                                </h3>
+                                <p class="list-item-content">Документация по внедрению сервиса Webim на сайтах, построенных на базе CMS Joomla.</p>
+                            </li>
+                            <li class="list-item">
+                                <h3 class="list-item-title">
+                                    <a class="list-item-link" href="#">Установка HTML-кода Webim для сайтов на Wordrpess</a>
+                                </h3>
+                                <p class="list-item-content">Документация по внедрению сервиса Webim на сайтах, построенных на базе Wordrpess.</p>
+                            </li>
+                            <li class="list-item">
+                                <h3 class="list-item-title">
+                                    <a class="list-item-link" href="#">Установка HTML-кода Webim для сайтов на uCoz.ru</a>
+                                </h3>
+                                <p class="list-item-content">Документация по внедрению сервиса Webim на сайтах, построенных на базе uCoz.ru.</p>
+                            </li>
+                            <li class="list-item">
+                                <h3 class="list-item-title">
+                                    <a class="list-item-link" href="#">Установка HTML-кода Webim для сайтов на webasyst.ru</a>
+                                </h3>
+                                <p class="list-item-content">Документация по внедрению сервиса Webim на сайтах, построенных на базе webasyst.ru.</p>
+                            </li>
+                            <li class="list-item">
+                                <h3 class="list-item-title">
+                                    <a class="list-item-link" href="#">Установка HTML-кода Webim для любого сайта</a>
+                                </h3>
+                                <p class="list-item-content">Документация по внедрению сервиса Webim на сайтах с другой CMS или написанных вручную.</p>
+                            </li>
+                        </ul>
+                    </section>
+                </article>
+                <article class="install articles-list-item">
+                    <section class="container">
+                        <h2 class="title title-2">Установка приложения<br>для операторов webim dashboard</h2>
+                        <div class="content">
+                            <p>Установка онлайн-консультанта Webim не займет более 15 минут</p>
+                        </div>
+                        <ul class="list">
+                            <li class="list-item">
+                                <h3 class="list-item-title">
+                                    <a class="list-item-link" href="#">Установка приложения Webim Dashboard для iPhone</a>
+                                </h3>
+                                <p class="list-item-content">Документация по установке дополнительного программного обеспечения для операторов <strong>сервиса Webim</strong>, использующих iPhone/iPad/etc от компании Apple.</p>
+                            </li>
+                            <li class="list-item">
+                                <h3 class="list-item-title">
+                                    <a class="list-item-link" href="#">Установка приложения Webim Dashboard для Android</a>
+                                </h3>
+                                <p class="list-item-content">Документация по установке дополнительного программного обеспечения для операторов <strong>сервиса Webim</strong>, использующих платформу Google Android.</p>
+                            </li>
+                            <li class="list-item">
+                                <h3 class="list-item-title">
+                                    <a class="list-item-link" href="#">Установка приложения Webim Dashboard для Ubuntu</a>
+                                </h3>
+                                <p class="list-item-content">Документация по установке дополнительного программного обеспечения для операторов <strong>сервиса Webim</strong>, использующих платформу Ubuntu.</p>
+                            </li>
+                            <li class="list-item">
+                                <h3 class="list-item-title">
+                                    <a class="list-item-link" href="#">Установка приложения Webim Dashboard</a>
+                                </h3>
+                                <p class="list-item-content">Документация по установке дополнительного программного обеспечения для операторов <strong>сервиса Webim</strong> под ОС Microsoft Windows.</p>
+                            </li>
+                            <li class="list-item">
+                                <h3 class="list-item-title">
+                                    <a class="list-item-link" href="#">Создание приложения Webim для Mac OS </a>
+                                </h3>
+                                <p class="list-item-content">Пошаговая инструкция создания приложения для оператора Webim для Mac OS с помощью Fluid</p>
+                            </li>
+                        </ul>
+                    </section>
+                </article>
+                <article class="articles-list-item">
+                    <section class="container">
+                        <h2 class="title title-2">Что вас ждёт после установки</h2>
+                        <div class="content">
+                            <p>Идейные соображения высшего порядка, а также сложившаяся структура организации позволяет</p>
+                        </div>
+                        <ol class="steps-list">
+                            <li class="steps-list-item">
+                                <b class="steps-list-icon">
+                                    <span class="icon-step_01"><span class="path1"></span><span class="path2"></span></span>
+                                </b>
+                                <span>Создание учетной записи компании и администратора</span>
+                            </li>
+                            <li class="steps-list-item">
+                                <b class="steps-list-icon">
+                                    <span class="icon-step_02"><span class="path1"></span><span class="path2"></span></span>
+                                </b>
+                                <span>Активация учетной записи</span></li>
+                            <li class="steps-list-item">
+                                <b class="steps-list-icon">
+                                    <span class="icon-step_03"><span class="path1"></span><span class="path2"></span></span>
+                                </b>
+                                <span>Начальная настройка</span>
+                            </li>
+                            <li class="steps-list-item">
+                                <b class="steps-list-icon">
+                                    <span class="icon-step_04"><span class="path1"></span><span class="path2"></span></span>
+                                </b>
+                                <span>Установка кнопки Webim на сайт</span>
+                            </li>
+                            <li class="steps-list-item">
+                                <b class="steps-list-icon">
+                                    <span class="icon-step_05"><span class="path1"></span><span class="path2"></span></span>
+                                </b>
+                                <span>Регистрация оператора</span>
+                            </li>
+                            <li class="steps-list-item">
+                                <b class="steps-list-icon">
+                                    <span class="icon-step_06"><span class="path1"></span><span class="path2"></span></span>
+                                </b>
+                                <span>Тест сервиса</span>
+                            </li>
+                        </ol>
+                        <footer class="buttons-group">
+                            <a href="" class="button is-active">Все возможности webim</a>
+                            <a href="" class="button is-dark">Протестировать бесплатно</a>
+                        </footer>
+                    </section>
+                </article>
+                <article class="articles-list-item">
+                    <section class="container">
+                        <div class="content">
+                            <p>Webim – это не только онлайн-консультант. Интегрируйте и другие каналы, чтобы клиенты могли обращаться к вам любым удобным способом </p>
+                        </div>
+                        <ul class="canals-list">
+                            <li class="canals-list-item">
+                                <p class="canals-list-text">
+                                    <b class="canals-list-icon">
+                                        <span class="icon-sn"></span>
+                                    </b>
+                                    <a class="canals-list-link">Социальные сети</a>
+                                </p>
+                            </li>
+                            <li class="canals-list-item">
+                                <p class="canals-list-text">
+                                    <b class="canals-list-icon">
+                                        <span class="icon-feedback"></span>
+                                    </b>
+                                    <a class="canals-list-link">Форма обратной связи</a>
+                                </p>
+                            </li>
+                            <li class="canals-list-item">
+                                <p class="canals-list-text">
+                                    <b class="canals-list-icon">
+                                        <span class="icon-app"><span class="path1"></span><span class="path2"></span></span>
+                                    </b>
+                                    <a class="canals-list-link">Чат в вашем мобильном приложении</a>
+                                    </a>
+                            </li>
+                            <li class="canals-list-item">
+                                <p class="canals-list-text">
+                                    <b class="canals-list-icon">
+                                        <span class="icon-msn"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></span>
+                                    </b>
+                                    <a class="canals-list-link">Мессенджеры</a>
+                                </p>
+                            </li>
+                            <li class="canals-list-item">
+                                <p class="canals-list-text">
+                                    <b class="canals-list-icon">
+                                        <img src="images/yad.svg" alt="" width="37" width="40"><!-- :) -->
+                                    </b>
+                                    <a class="canals-list-link">Яндекс.Диалоги</a>
+                                </p>
+                            </li>
+                            <li class="canals-list-item">
+                                <p class="canals-list-text">
+                                    <b class="canals-list-icon">
+                                        <span class="icon-email"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span></span>
+                                    </b>
+                                    <a class="canals-list-link">Электронная почта</a>
+                                </p>
+                            </li>
+                            <li class="canals-list-item">
+                                <p class="canals-list-text">
+                                    <b class="canals-list-icon">
+                                        <span class="icon-chatbots"><span class="path1"></span><span class="path2"></span></span>
+                                    </b>
+                                    <a class="canals-list-link">Чат-боты</a>
+                                </p>
+                            </li>
+                        </ul>
+                    </section>
+                </article>
+            </section>
+        </main>
+        <footer class="footer" itemscope="" itemtype="https://schema.org/LocalBusiness">
+            <div class="footer-content">
+                <div class="footer-first">
+                    <div class="footer-first-content">
+                        <div class="ff-block fabout">
+                            <p class="ff-title">О нас</p>
+                            <div class="menu-footermenu1-container">
+                                <ul id="menu-footermenu1" class="footer-menu">
+                                    <li id="menu-item-6943" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6943"><a href="/about/contacts/">Контакты и реквизиты</a></li>
+                                    <li id="menu-item-6944" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6944"><a href="/about/reviews/">Отзывы клиентов</a></li>
+                                    <li id="menu-item-6945" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6945"><a href="/clients-and-cases/">Клиенты и кейсы</a></li>
+                                    <li id="menu-item-6946" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-6946"><a href="/about/">О компании</a></li>
+                                    <li id="menu-item-6947" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6947"><a href="/blog/">Блог</a></li>
+                                    <li id="menu-item-10084" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10084"><a href="/job/">Вакансии</a></li>
+                                    <li id="menu-item-6949" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6949"><a href="/privacy/">Политика конфиденциальности</a></li>
+                                    <li id="menu-item-9264" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9264"><a href="/agreement/">Согласие на обработку данных</a></li>
+                                    <li id="menu-item-6950" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6950"><a href="/sposoby-oplaty/">Оплата</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="ff-block fprodukt">
+                            <p class="ff-title">Продукт</p>
+                            <div class="menu-footermenu2-container">
+                                <ul id="menu-footermenu2" class="footer-menu">
+                                    <li id="menu-item-7225" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7225"><a href="/price/">Тарифы</a></li>
+                                    <li id="menu-item-9265" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9265"><a href="/features/">Возможности и преимущества</a></li>
+                                    <li id="menu-item-10054" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10054"><a href="https://webim.ru/setup/">Установка</a></li>
+                                    <li id="menu-item-9266" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9266"><a href="/integration/">Интеграция</a></li>
+                                    <li id="menu-item-8751" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8751"><a href="/kb/dev/mobile-sdk/">Mobile SDK</a></li>
+                                    <li id="menu-item-7095" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7095"><a href="/integration/#cms">Модули CMS</a></li>
+                                    <li id="menu-item-9267" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9267"><a href="/apps/">Приложения для операторов</a></li>
+                                    <li id="menu-item-9268" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9268"><a href="/features/license-agreement/">Лицензионное соглашение</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="ff-block fhelpes">
+                            <p class="ff-title">Помощь</p>
+                            <div class="menu-footermenu3-container">
+                                <ul id="menu-footermenu3" class="footer-menu">
+                                    <li id="menu-item-6959" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6959"><a href="/kb/">База знаний</a></li>
+                                    <li id="menu-item-6960" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6960"><a href="/about/contacts/#contactForm">Обратная связь</a></li>
+                                </ul>
+                            </div>
+                            <p class="ff-title">Разработчикам</p>
+                            <div class="menu-footermenu4-container">
+                                <ul id="menu-footermenu4" class="footer-menu">
+                                    <li id="menu-item-6962" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6962"><a href="https://webim.ru/kb/dev/stored-data-api/">API для разработчиков</a></li>
+                                    <li id="menu-item-6963" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6963"><a href="https://webim.ru/kb/dev/partner-api/8276-partner/">API для конструкторов сайтов</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="ff-block fparnters">
+                            <p class="ff-title">Партнерам</p>
+                            <div class="menu-footermenu5-container">
+                                <ul id="menu-footermenu5" class="footer-menu">
+                                    <li id="menu-item-6964" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6964"><a href="/partners/">Партнерская программа</a></li>
+                                    <li id="menu-item-6966" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6966"><a href="https://partner.webim.ru/partner/login">Стать партнером</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-second">
+                    <div class="footer-second-content">
+                        <div class="fs-block flogo">
+                            <a class="falogo" href="/"></a>
+                            <p><span itemprop="name">Webim</span> 2008-2019 <br>© Все права защищены</p>
+                            <form method="get" class="search" id="know-search" action="https://webim.ru">
+                                <input type="search" class="field" name="s" id="s" placeholder="Поиск по сайту">
+                                <button type="submit"></button>
+                            </form>
+                        </div>
+                        <div class="fs-block fphones_adress">
+                            <div class="fgphone"><a href="tel:+78005504125" itemprop="telephone">+7 (800) 550 41 25</a></div>
+                            <div class="fphone"><a href="tel:+74952302831" itemprop="telephone">+7 (495) 230 28 31</a></div>
+                            <div class="fadress" itemprop="address" itemscope="" itemtype="https://schema.org/PostalAddress"><span itemprop="addressLocality">Москва</span>, <span itemprop="streetAddress">Серебряническая набережная, 29</span></div>
+                            <div class="fphone"><a href="tel:+78122401331" itemprop="telephone">+7 (812) 240 13 31</a></div>
+                            <div class="fadress" itemprop="address" itemscope="" itemtype="https://schema.org/PostalAddress"><span itemprop="addressLocality">Санкт-Петербург</span>, <span itemprop="streetAddress">Большой пр. ПС, д. 18, офис 501</span></div>
+                        </div>
+                        <div class="fs-block fmails_social">
+                            <a class="fmail" href="mailto:contact@webim.ru"><span itemprop="email">contact@webim.ru</span></a>
+                            <a class="fmail" href="mailto:sales@webim.ru">sales@webim.ru</a>
+                            <div class="jtime"><span itemprop="openingHours" content="Mo-Fr 10:00-18:00">понедельник-пятница 10:00-18:00</span></div>
+                            <div class="fsocial">
+                                <a class="fvk-link" href="https://vk.com/webim_online_konsultant" target="_blank"></a>
+                                <a class="ffb-link" href="https://www.facebook.com/webim.ru" target="_blank"></a>
+                                <!-- <a class="ftwit-link" href="https://twitter.com/webim_ru" target="_blank"></a>
+                            <a class="fskype-link" href="skype:webim.ru"></a> -->
+                                <a href="https://www.youtube.com/channel/UCtXz4SyPYv0pr4n4InKCweQ" target="_blank" class="youtube-link"></a>
+                                <a href="https://t.me/Webimru_bot?info" target="_blank" class="ftelegram-link"></a>
+                            </div>
+                            <div class="image-footer">
+                                <a href="/sk/"><img src="/wp-content/themes/webim2/images/Sk_resident_ru.svg" alt="Участник инновационного центра Сколково" title="Участник инновационного центра Сколково" width="80"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+<script>
+$(function() {
+    $('#check').on('click', function() {
+        $('.check').toggleClass('is-active');
+    });
+});
+</script>
+<!--poxefev@idea-mail.net-->
+
+</html>
